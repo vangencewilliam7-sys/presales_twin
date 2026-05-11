@@ -1,0 +1,45 @@
+# ============================
+# Presales Digital Twin — Backend Dependencies
+# ============================
+
+# -- Core Framework --
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+python-dotenv==1.0.1
+pydantic==2.8.0
+python-multipart==0.0.9
+
+# -- LLM --
+openai==1.40.0
+tiktoken==0.7.0
+
+# -- Supabase (Database + Vector Storage) --
+supabase==2.7.0
+
+# -- Database ORM (connects to Supabase's Postgres directly) --
+sqlalchemy==2.0.31
+alembic==1.13.0
+psycopg2-binary==2.9.9
+
+# -- HTTP / Web --
+httpx==0.27.0
+
+# -- Module 1: Web Scraping --
+# serpapi==0.1.5          # Uncomment if using SerpAPI
+# tavily-python==0.3.0    # Uncomment if using Tavily
+beautifulsoup4==4.12.0
+
+# -- Module 1: Document Processing --
+PyPDF2==3.0.1
+langchain-text-splitters==0.2.0
+
+# -- Module 2: Transcription --
+deepgram-sdk==3.5.0
+aiofiles==23.2.1
+
+# -- Module 2: Data Analysis --
+pandas==2.2.0
+
+# -- Testing --
+pytest==8.2.0
+pytest-asyncio==0.23.0

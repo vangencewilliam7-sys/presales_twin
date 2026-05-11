@@ -1,0 +1,23 @@
+services:
+  # ---- Backend API ----
+  backend:
+    build: ./backend
+    container_name: presales-twin-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+
+  # ---- Frontend (Person 4 will set this up) ----
+  # frontend:
+  #   build: ./frontend
+  #   container_name: presales-twin-frontend
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - backend
+
+# NOTE: No PostgreSQL or Qdrant containers needed!
+# Supabase handles both the database AND vector storage in the cloud.
+# Just set your SUPABASE_URL, SUPABASE_KEY, and DATABASE_URL in backend/.env
